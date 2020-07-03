@@ -22,7 +22,7 @@ pod 'PATools'
 
 ## Author
 
-942v, guillermo.saenz@fisglobal.com
+942v, gsaenz@proatomicdev.com
 
 ## License
 
