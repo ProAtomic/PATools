@@ -1,0 +1,43 @@
+# Xcode
+#ProAtomic
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcodeproj/xcuserdata/
+*.xcworkspace/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+xcuserstate
+*.xcuserdatad/
+profile
+*.moved-aside
+DerivedData
+.idea/
+
+Pods/
+Podfile.lock
+
+# fastlane specific
+**/fastlane/report.xml
+
+# deliver temporary files
+**/fastlane/Preview.html
+
+# snapshot generated screenshots
+**/fastlane/screenshots
+
+# scan temporary files
+**/fastlane/test_output
+
+#  compilation files
+**/fastlane/compilation/
+
+# fastlane .env
+**/fastlane/.env

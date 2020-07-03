@@ -1,0 +1,6 @@
+use_frameworks!
+target 'PATools_Tests' do
+  pod 'PATools', :path => '../'
+  
+  
+end
