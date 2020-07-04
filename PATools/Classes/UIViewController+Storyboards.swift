@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIViewController {
-    class func instantiate(from storyboard: String, framework: String) -> Self {
+    class func instantiate(from storyboard: String, framework: String? = nil) -> Self {
         let bundle = self.bundle(for: framework)
         
         let storyboard = UIStoryboard(name: storyboard, bundle: bundle)
