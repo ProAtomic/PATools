@@ -9,13 +9,25 @@ import UIKit
 
 public extension UIViewController {
     class func instantiate(from storyboard: String, framework: String) -> Self {
-        let bundle = Bundle.main
-
-        let resourcesBundleURL = bundle.url(forResource: framework, withExtension: "bundle")!
+        let bundle = self.bundle(for: framework)
         
-        let resourcesBundle = Bundle(url: resourcesBundleURL)
-        let storyboard = UIStoryboard(name: storyboard, bundle: resourcesBundle)
+        let storyboard = UIStoryboard(name: storyboard, bundle: bundle)
         
         return storyboard.instantiateInitialViewController() as! Self
+    }
+}
+
+fileprivate extension UIViewController {
+    class func bundle(for framework: String?) -> Bundle {
+        let mainBundle = Bundle.main
+        guard let framework = framework else {
+            return mainBundle
+        }
+
+        let resourcesBundleURL = mainBundle.url(forResource: framework, withExtension: "bundle")!
+        
+        let resourcesBundle = Bundle(url: resourcesBundleURL)!
+        
+        return resourcesBundle
     }
 }
