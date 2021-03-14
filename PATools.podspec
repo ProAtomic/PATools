@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PATools'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Common tools'
   s.description      = 'Common tools of PA'
   s.homepage         = 'https://proatomicdev.com'
@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_versions = '5.1'
   s.source_files = 'PATools/Classes/**/*.{swift}'
+  s.dependency 'CocoaLumberjack/Swift'
 end
